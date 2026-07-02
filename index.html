@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm and Routine- Polyrhythm sequencer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo elementofheader">
+            Polyrhythm Sequencer
+        </div>
+        <div class="controls elementofheader">
+            <div class="play play-icon"></div>
+            <div class="pauseblock"></div>
+        </div>
+        <div class="tempo elementofheader">
+            <div class="tempotext"></div>
+            <input type="range" min="1" max="200" value="120" id="tempo">
+        </div>
+        <div class="swing elementofheader">
+            <div class="swingtext"></div>
+            <input type="range" min="0" max="60" value="0" id="swing">
+        </div>
+        <div class="metronome elementofheader">
+            <div class="metronometext">
+                Metronome
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="power-switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="mastervol elementofheader">
+            <div class="masterVolumeText"></div>
+            <input type="range" min="0" max="100" value="0" id="masterVolume">
+        </div>
+        <div class="filebtns elementofheader">
+            <div class="save">Save</div>
+            <br>
+            <div class="load">Load</div>
+        </div>
+        <div class="masterTS elementofheader">
+            <div class="masterTimeSignature">
+                4/4
+            </div>
+            Master Time Signature
+        </div>
+    </div>
+    <script src="ui.js"></script>
+</body>
+
+</html>
