@@ -33,10 +33,10 @@ This is the end of Week 1 / Day 1 of a 4-week build. The UI shell is functional 
 - Mute button toggles visual state per track
 - Per-track volume slider rendered and styled
 - Step tiles render correctly per track based on step count
+- Tile click-to-toggle (active/inactive visual state)
+- Solo button logic (interaction with mute state across tracks)
 
 ### What is not built yet
-- [ ] Tile click-to-toggle (active/inactive visual state)
-- [ ] Solo button logic (interaction with mute state across tracks)
 - [ ] Web Audio API integration (AudioContext, sound on click)
 - [ ] Lookahead scheduler (sample-accurate timing loop)
 - [ ] Visual playhead (requestAnimationFrame loop, decoupled from scheduler)
