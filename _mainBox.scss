@@ -83,6 +83,7 @@ border: 2px solid gray;
 
 .trackVolumeSlider {
     -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 8px; // Set height here instead of track
     background: v.$tertiary-color; // "Empty" track color
