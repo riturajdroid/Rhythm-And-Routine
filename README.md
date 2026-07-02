@@ -146,8 +146,8 @@ The scheduling architecture specifically is what makes this non-trivial and resu
 
 | Date | Phase | What was built |
 |---|---|---|
-| Day 1 | Phase 1 | Header bar, track injection, step +/−, mute toggle, event delegation |
-| _next_ | Phase 1 | Tile click-to-toggle, solo logic, voice selector |
+| Day 1 | Phase 1 | Header bar, track injection, step +/−, mute toggle, event delegation, Tile click-to-toggle, solo logic |
+| _next_ | Phase 1 |voice selector|
 | _next_ | Phase 2 | AudioContext, single sound on click |
 | _next_ | Phase 2 | Lookahead scheduler, single track |
 
