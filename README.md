@@ -51,7 +51,7 @@ This is the end of Week 1 / Day 1 of a 4-week build. The UI shell is functional 
 ### Phase 1 — UI Shell ✅ _(done)_
 HTML structure, CSS layout, dynamic track injection, slider wiring, event delegation for track controls.
 
-### Phase 2 — Audio Core 🔲(_(current)_
+### Phase 2 — Audio Core 🔲 _(current)_
 `AudioContext` setup, single-track lookahead scheduler, BPM-accurate step firing, play/stop transport.
 
 ### Phase 3 — Polyrhythm Engine 🔲
