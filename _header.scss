@@ -33,6 +33,7 @@
     margin-right: 5px;
     &:hover{
         scale: 1.05;
+        cursor: pointer;
     }
 }    
 
@@ -42,6 +43,7 @@
     background-color: v.$primary-color;
     &:hover{
         scale: 1.05;
+        cursor: pointer;
     }
 }    
 
@@ -49,6 +51,7 @@
 // _slider.scss
 #tempo {
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 8px; // Set height here instead of track
   background: v.$tertiary-color; // "Empty" track color
@@ -68,6 +71,7 @@
 
 #swing {
     -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 8px; // Set height here instead of track
     background: v.$tertiary-color; // "Empty" track color
@@ -132,6 +136,7 @@
 }
 #masterVolume {
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 8px; // Set height here instead of track
   background: v.$tertiary-color; // "Empty" track color

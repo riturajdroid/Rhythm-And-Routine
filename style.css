@@ -38,6 +38,7 @@ body {
 }
 .play:hover {
   scale: 1.05;
+  cursor: pointer;
 }
 
 .pauseblock {
@@ -47,10 +48,13 @@ body {
 }
 .pauseblock:hover {
   scale: 1.05;
+  cursor: pointer;
 }
 
 #tempo {
   -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   width: 100%;
   height: 8px;
   background: rgb(6, 255, 160);
@@ -69,6 +73,8 @@ body {
 
 #swing {
   -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   width: 100%;
   height: 8px;
   background: rgb(6, 255, 160);
@@ -127,6 +133,8 @@ body {
 
 #masterVolume {
   -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   width: 100%;
   height: 8px;
   background: rgb(6, 255, 160);
