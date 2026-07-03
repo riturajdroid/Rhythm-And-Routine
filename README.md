@@ -3,7 +3,7 @@
 > A multi-track step sequencer with independent time signatures, built entirely in vanilla JavaScript using the Web Audio API.
 
 ![Status](https://img.shields.io/badge/status-in%20development-yellow)
-![Phase](https://img.shields.io/badge/phase-1%20of%204-blue)
+![Phase](https://img.shields.io/badge/phase-2%20of%204-blue)
 ![Stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20Vanilla%20JS-green)
 
 ---
