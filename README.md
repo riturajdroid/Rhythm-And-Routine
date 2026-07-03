@@ -35,9 +35,9 @@ This is the end of Week 1 / Day 1 of a 4-week build. The UI shell is functional 
 - Step tiles render correctly per track based on step count
 - Tile click-to-toggle (active/inactive visual state)
 - Solo button logic (interaction with mute state across tracks)
+- Web Audio API integration (AudioContext, sound on click)
 
 ### What is not built yet
-- [ ] Web Audio API integration (AudioContext, sound on click)
 - [ ] Lookahead scheduler (sample-accurate timing loop)
 - [ ] Visual playhead (requestAnimationFrame loop, decoupled from scheduler)
 - [ ] Pattern save/load (localStorage serialization)
@@ -48,10 +48,10 @@ This is the end of Week 1 / Day 1 of a 4-week build. The UI shell is functional 
 
 ## Roadmap
 
-### Phase 1 — UI Shell ✅ _(current)_
+### Phase 1 — UI Shell ✅ _(done)_
 HTML structure, CSS layout, dynamic track injection, slider wiring, event delegation for track controls.
 
-### Phase 2 — Audio Core 🔲
+### Phase 2 — Audio Core 🔲(_(current)_
 `AudioContext` setup, single-track lookahead scheduler, BPM-accurate step firing, play/stop transport.
 
 ### Phase 3 — Polyrhythm Engine 🔲
@@ -115,6 +115,7 @@ rhythm-and-routine/
 ├── ui.js            # DOM interaction — track creation, event delegation
 ├── scheduler.js     # (Phase 2) Audio scheduling engine
 ├── audio.js         # (Phase 2) AudioContext setup, voice synthesis
+├── AudioManagement.md #Notes for using Audio API    
 └── README.md
 ```
 
@@ -147,8 +148,7 @@ The scheduling architecture specifically is what makes this non-trivial and resu
 | Date | Phase | What was built |
 |---|---|---|
 | Day 1 | Phase 1 | Header bar, track injection, step +/−, mute toggle, event delegation, Tile click-to-toggle, solo logic |
-| _next_ | Phase 1 |voice selector|
-| _next_ | Phase 2 | AudioContext, single sound on click |
+| Day 2 | Phase 2 | AudioContext, single sound on click |
 | _next_ | Phase 2 | Lookahead scheduler, single track |
 
 > _Update this table at the end of each working session. It becomes your commit message history in readable form and shows interviewers consistent progress._
