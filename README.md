@@ -22,9 +22,7 @@ No frameworks. No build tools. No backend. Runs entirely in the browser.
 
 ---
 
-## Current State — Phase 1 (UI Shell)
-
-This is the end of Week 1 / Day 1 of a 4-week build. The UI shell is functional but audio is not yet wired.
+## Current State — Phase 2 (Audio Core)
 
 ### What works right now
 - Header bar with tempo slider, swing slider, metronome toggle, master volume, save/load buttons
@@ -36,9 +34,10 @@ This is the end of Week 1 / Day 1 of a 4-week build. The UI shell is functional 
 - Tile click-to-toggle (active/inactive visual state)
 - Solo button logic (interaction with mute state across tracks)
 - Web Audio API integration (AudioContext, sound on click)
+- Lookahead scheduler (sample-accurate timing loop)
 
 ### What is not built yet
-- [ ] Lookahead scheduler (sample-accurate timing loop)
+- [ ] Track linking to metronome
 - [ ] Visual playhead (requestAnimationFrame loop, decoupled from scheduler)
 - [ ] Pattern save/load (localStorage serialization)
 - [ ] Per-track voice/sample selection
@@ -126,7 +125,7 @@ rhythm-and-routine/
 No build step, no dependencies, no server required.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/rhythm-and-routine.git
+git clone https://github.com/riturajdroid/rhythm-and-routine.git
 cd rhythm-and-routine
 # open index.html in any modern browser
 ```
