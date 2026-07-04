@@ -33,11 +33,10 @@ No frameworks. No build tools. No backend. Runs entirely in the browser.
 - Step tiles render correctly per track based on step count
 - Tile click-to-toggle (active/inactive visual state)
 - Solo button logic (interaction with mute state across tracks)
-- Web Audio API integration (AudioContext, sound on click)
-- Lookahead scheduler (sample-accurate timing loop)
 
 ### What is not built yet
-- [ ] Track linking to metronome
+- [ ] Web Audio API integration (AudioContext, sound on click)
+- [ ] Lookahead scheduler (sample-accurate timing loop)
 - [ ] Visual playhead (requestAnimationFrame loop, decoupled from scheduler)
 - [ ] Pattern save/load (localStorage serialization)
 - [ ] Per-track voice/sample selection
@@ -147,10 +146,11 @@ The scheduling architecture specifically is what makes this non-trivial and resu
 | Date | Phase | What was built |
 |---|---|---|
 | Day 1 | Phase 1 | Header bar, track injection, step +/−, mute toggle, event delegation, Tile click-to-toggle, solo logic |
-| Day 2 | Phase 2 | AudioContext, single sound on click |
-| Day 3 | Phase 2 | Lookahead scheduler, BPM math , play/stop |
+| _next_ | Phase 1 |voice selector|
+| _next_ | Phase 2 | AudioContext, single sound on click |
+| _next_ | Phase 2 | Lookahead scheduler, single track |
 
-
+> _Update this table at the end of each working session. It becomes your commit message history in readable form and shows interviewers consistent progress._
 
 ---
 
