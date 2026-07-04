@@ -1,11 +1,13 @@
 const tempo = document.querySelector("#tempo");
 const tempotext = document.querySelector(".tempotext");
 let tempoval = tempo.value;
+setBPM(tempoval)
 console.log(tempoval)
 tempotext.innerHTML = `Tempo:${tempoval}`;
 tempo.oninput = function () {
   tempoval = tempo.value;
   tempotext.innerHTML = `Tempo:${tempoval}`;
+  setBPM(tempoval);
 }
 
 
@@ -156,15 +158,13 @@ const header = document.querySelector(".header");
 
 header.addEventListener('click', (e) => {
     if (e.target.classList.contains('play')) {
-        // 1. Get or create the context
-        const ctx = getAudioContext();
-        
-        // 2. Grab the exact time right now
-        const now = ctx.currentTime;
-        
-        // 3. Pass it to the function
-        makeSound(now);
+        startScheduler();
+    }
+    if (e.target.classList.contains('pauseblock')) {
+        stopScheduler();
     }
 });
+
+
 
 
