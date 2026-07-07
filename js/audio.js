@@ -1,3 +1,5 @@
+
+
 let audioCtx;
 
 function getAudioContext() {
@@ -10,7 +12,7 @@ function getAudioContext() {
     return audioCtx;
 }
 
-function makeSound(time,volume = 0.6) {
+function makeSound(time,volume) {
     if (time === undefined) {
         console.log("No time given");
         return;

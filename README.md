@@ -2,8 +2,8 @@
 
 > A multi-track step sequencer with independent time signatures, built entirely in vanilla JavaScript using the Web Audio API.
 
-![Status](https://img.shields.io/badge/status-in%20development-yellow)
-![Phase](https://img.shields.io/badge/phase-2%20of%204-blue)
+![Status](https://img.shields.io/badge/status-completed-brightgreen)
+![Phase](https://img.shields.io/badge/phase-completed-brightgreen)
 ![Stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20Vanilla%20JS-green)
 
 ---
@@ -22,8 +22,6 @@ No frameworks. No build tools. No backend. Runs entirely in the browser.
 
 ---
 
-## Current State — Phase 2 (Audio Core)
-
 ### What works right now
 - Header bar with tempo slider, swing slider, metronome toggle, master volume, save/load buttons
 - Add Track button dynamically injects a new track row into the DOM
@@ -35,12 +33,12 @@ No frameworks. No build tools. No backend. Runs entirely in the browser.
 - Solo button logic (interaction with mute state across tracks)
 - Web Audio API integration (AudioContext, sound on click)
 - Lookahead scheduler (sample-accurate timing loop)
+- Visual playhead (requestAnimationFrame loop, decoupled from scheduler)
+- Pattern save/load (localStorage serialization)
+- Swing offset applied to scheduler timing
 
-### What is not built yet
-- [ ] Visual playhead (requestAnimationFrame loop, decoupled from scheduler)
-- [ ] Pattern save/load (localStorage serialization)
+### Future Features (V2)
 - [ ] Per-track voice/sample selection
-- [ ] Swing offset applied to scheduler timing
 
 ---
 
@@ -49,22 +47,20 @@ No frameworks. No build tools. No backend. Runs entirely in the browser.
 ### Phase 1 — UI Shell ✅ _(done)_
 HTML structure, CSS layout, dynamic track injection, slider wiring, event delegation for track controls.
 
-### Phase 2 — Audio Core 🔲 _(current)_
+### Phase 2 — Audio Core ✅ _(done)_
 `AudioContext` setup, single-track lookahead scheduler, BPM-accurate step firing, play/stop transport.
 
-### Phase 3 — Polyrhythm Engine 🔲
+### Phase 3 — Polyrhythm Engine ✅ _(done)_
 Multi-track independent time signatures, per-track step duration math against shared master bar, visual playhead synced via `requestAnimationFrame`.
 
-### Phase 4 — Polish & Portfolio Release 🔲
+### Phase 4 — Polish & Portfolio Release ✅ _(partially_done)_
 Swing timing offset, per-track sample upload (`decodeAudioData`), pattern save/load to localStorage, export as JSON, UI visual pass, README demo video, GitHub Pages deploy.
 
 ---
 
 ## Architecture Notes
 
-> _This section will grow as the audio engine is built. Documenting the scheduler here is important — it's the part technical reviewers will ask about._
-
-### Scheduler design (planned)
+### Scheduler design
 The sequencer will use the **lookahead scheduler pattern** rather than `setInterval` for sound triggering. This is the same approach used in professional DAWs and browser-based audio tools.
 
 **Why not `setInterval`:** JavaScript timers fire late under load. A `setInterval(callback, 16)` that's supposed to fire every 16ms may fire at 30–50ms under tab pressure, causing audible timing drift in the rhythm.
@@ -85,7 +81,6 @@ setInterval (25ms)           requestAnimationFrame
   pushes to _events[]
 ```
 
-> _Full implementation notes will be added in Phase 2._
 
 ---
 
@@ -108,12 +103,12 @@ setInterval (25ms)           requestAnimationFrame
 
 ```
 rhythm-and-routine/
-├── index.html       # HTML shell — header, main track container
-├── style.css        # All styles — layout, sliders, tiles, track controls
-├── ui.js            # DOM interaction — track creation, event delegation
-├── scheduler.js     # (Phase 2) Audio scheduling engine
-├── audio.js         # (Phase 2) AudioContext setup, voice synthesis
-├── AudioManagement.md #Notes for using Audio API    
+├── index.html               # HTML shell — header, main track container
+├── style.css                # All styles — layout, sliders, tiles, track controls
+├── ui.js                    # DOM interaction — track creation, event delegation
+├── scheduler.js             # Audio scheduling engine
+├── audio.js                 # AudioContext setup, voice synthesis
+├── AudioManagement.md       # Notes for using Audio API    
 └── README.md
 ```
 
@@ -148,8 +143,10 @@ The scheduling architecture specifically is what makes this non-trivial and resu
 | Day 1 | Phase 1 | Header bar, track injection, step +/−, mute toggle, event delegation, Tile click-to-toggle, solo logic |
 | Day 2 | Phase 2 |AudioContext, single sound on click|
 | Day 3 | Phase 2 | Lookahead scheduler, single track |
+| Day 4 | Phase 3 |Multi-track independent time signatures, requestAnimationFrame |
+| Day 5 | Phase 4 | Swing timing offset, save / load to localStorage  |
 
-> _Update this table at the end of each working session. It becomes your commit message history in readable form and shows interviewers consistent progress._
+
 
 ---
 

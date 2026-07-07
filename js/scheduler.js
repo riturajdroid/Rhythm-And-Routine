@@ -1,3 +1,5 @@
+
+
 let bpm;
 let isPlaying = false;
 let nextNoteTime = 0;
@@ -27,7 +29,7 @@ function scheduler() {
             const swingOffset = (track.currentStep % 2 !== 0) ? (swingval / 100) * (getStepDuration(track.steps) / 2) : 0;
             const shouldPlay = anySoloed ? track.solo : !track.mute;
             if (shouldPlay && track.pattern[track.currentStep] === 1) {
-                makeSound(track.nextNoteTime, track.voice, track.volume);
+                makeSound(track.nextNoteTime,  track.volume);
             }
             eventQueue.push({
                 time: track.nextNoteTime,
@@ -35,7 +37,7 @@ function scheduler() {
                 stepIndex: track.currentStep
             });
             track.currentStep = (track.currentStep + 1) % track.steps;
-            track.nextNoteTime += getStepDuration(track.steps); // uses its own step count
+            track.nextNoteTime += getStepDuration(track.steps); 
         }
     });
 }
@@ -58,6 +60,6 @@ function stopScheduler() {
 
 
 
-//visual layer
+
 
 const eventQueue = [];

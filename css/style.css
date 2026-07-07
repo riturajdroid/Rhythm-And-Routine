@@ -1,5 +1,5 @@
 body {
-  background-image: url("bg.png");
+  background-image: url("../assets/bg.png");
   background-blend-mode: hard-light;
   background-color: rgb(0, 6, 31);
   color: #ffd98e;
@@ -230,7 +230,7 @@ body {
 }
 
 .trackName {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .trackControls {

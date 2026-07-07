@@ -1,6 +1,6 @@
 @use 'variables' as v;
 body{
-    background-image: url("bg.png");
+    background-image: url("../assets/bg.png");
     background-blend-mode:hard-light;
     background-color: v.$primary-color;    
     color: v.$primary-text;
