@@ -18,8 +18,7 @@ No frameworks. No build tools. No backend. Runs entirely in the browser.
 
 ## Live Demo
 
-> 🔗 _Link will be added once deployed to GitHub Pages_
-
+🔗 [Practice with Rhythm & Routine Live](https://riturajdroid.github.io/Rhythm-And-Routine/)
 ---
 
 ### What works right now
