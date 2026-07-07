@@ -17,37 +17,29 @@
 }
 
 .logo{
-    font-size: 1.8rem;
-    word-wrap: break-word;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
 }
 
-.controls{
-    display: flex;
-    height:40% ;
+.controls {
+  display: flex;
+  height: 40%;
+  gap: 5px;
 }
 
-.play{
-    width: 50%;
-    height: 100%;
-    background-color: v.$tertiary-color;
-    margin-right: 5px;
-    &:hover{
-        scale: 1.05;
-        cursor: pointer;
-    }
-}    
+.playBtn {
+  width: 50px;
+  height: 100%;
+  background-color: rgb(255, 6, 6);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.playBtn:hover { scale: 1.05; }
 
-.pauseblock{
-    width: 50%;
-    height: 100%;
-    background-color: v.$primary-color;
-    &:hover{
-        scale: 1.05;
-        cursor: pointer;
-    }
-}    
-
-
+.playBtn svg { width: 20px; height: 20px; fill: white; }
 // _slider.scss
 #tempo {
   -webkit-appearance: none;
@@ -155,13 +147,15 @@
 }
 
 .save{
-    width: 25%;
+    width: 40%;
     border: 2px solid v.$primary-color;
+    cursor: pointer;
 }
 
 .load{
-    width: 25%;
+    width: 40%;
     border: 2px solid v.$primary-color;
+    cursor: pointer;
 }
 
 .masterTimeSignature{

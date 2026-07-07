@@ -9,13 +9,23 @@
 </head>
 
 <body>
+    <div class="mobile-warning">
+        Try using in landscape mode or use a bigger screen (PC, Laptop etc)
+    </div>
     <div class="header">
         <div class="logo elementofheader">
             Polyrhythm Sequencer
         </div>
         <div class="controls elementofheader">
-            <div class="play play-icon"></div>
-            <div class="pauseblock"></div>
+            <button class="playBtn" id="playPauseBtn">
+                <svg id="playIcon" viewBox="0 0 24 24">
+                    <polygon points="5,3 19,12 5,21" />
+                </svg>
+                <svg id="pauseIcon" viewBox="0 0 24 24" style="display:none;">
+                    <rect x="5" y="3" width="4" height="18" />
+                    <rect x="15" y="3" width="4" height="18" />
+                </svg>
+            </button>
         </div>
         <div class="tempo elementofheader">
             <div class="tempotext"></div>
@@ -25,7 +35,7 @@
             <div class="swingtext"></div>
             <input type="range" min="0" max="60" value="0" id="swing">
         </div>
-        <div class="metronome elementofheader">
+        <!-- <div class="metronome elementofheader">
             <div class="metronometext">
                 Metronome
             </div>
@@ -33,10 +43,10 @@
                 <input type="checkbox" id="power-switch">
                 <span class="slider"></span>
             </label>
-        </div>
+        </div> -->
         <div class="mastervol elementofheader">
             <div class="masterVolumeText"></div>
-            <input type="range" min="0" max="100" value="0" id="masterVolume">
+            <input type="range" min="0" max="100" value="50" id="masterVolume">
         </div>
         <div class="filebtns elementofheader">
             <div class="save">Save</div>
@@ -53,7 +63,7 @@
 
     <div class="mainBox">
         <div class="addTrackButton">+Add Track</div>
-        
+
     </div>
     <script src="js/audio.js"></script>
     <script src="js/scheduler.js"></script>

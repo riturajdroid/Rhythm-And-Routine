@@ -10,7 +10,7 @@ function getAudioContext() {
     return audioCtx;
 }
 
-function makeSound(time) {
+function makeSound(time,volume = 0.6) {
     if (time === undefined) {
         console.log("No time given");
         return;
@@ -23,9 +23,9 @@ function makeSound(time) {
     osc.connect(gain);
     gain.connect(ctx.destination);
 
-    osc.frequency.setValueAtTime(850, time);
-    osc.frequency.exponentialRampToValueAtTime(0.01, time + 0.1);
-    gain.gain.setValueAtTime(1, time);
+    osc.frequency.setValueAtTime(150, time);
+    osc.frequency.exponentialRampToValueAtTime(40, time + 0.1);
+    gain.gain.setValueAtTime(1*volume*masterVolumeVal, time);
     gain.gain.exponentialRampToValueAtTime(0.01, time + 0.1);
 
     osc.start(time);

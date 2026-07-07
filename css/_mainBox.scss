@@ -115,3 +115,9 @@ border: 2px solid gray;
 .tile.active {
   background-color: v.$tertiary-color;
 }
+
+.tile.playing {
+    outline: 3px solid white;
+    outline-offset: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
